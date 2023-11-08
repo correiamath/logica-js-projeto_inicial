@@ -17,10 +17,23 @@
 // }
 
 alert("Welcome to the secret number game!");
-let numeroSecreto = 5;
-let chute = prompt("Choose a number between 1 and 30");
-if (chute == numeroSecreto) {
-  alert(`🎉You won!!! The secret number really is ${numeroSecreto}!🎉`);
-} else {
-  alert("Incorrect number 😭");
+
+let numeroSecreto = 12;
+
+console.log(numeroSecreto);
+
+let chute;
+
+while (chute != numeroSecreto) {
+  let chute = prompt("Choose a number between 1 and 100");
+
+  if (chute == numeroSecreto) {
+    alert(`🎉You won!!! The secret number really is ${numeroSecreto}!🎉`);
+  } else {
+    if (numeroSecreto > chute) {
+      alert(`O número secreto é maior que ${chute}!`);
+    } else {
+      alert(`O número secreto é menor que ${chute}!`);
+    }
+  }
 }
