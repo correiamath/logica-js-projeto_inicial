@@ -23,17 +23,21 @@ let numeroSecreto = 12;
 console.log(numeroSecreto);
 
 let chute;
+let tentativas = 1;
 
 while (chute != numeroSecreto) {
-  let chute = prompt("Choose a number between 1 and 100");
+  chute = prompt("Choose a number between 1 and 100");
 
   if (chute == numeroSecreto) {
-    alert(`🎉You won!!! The secret number really is ${numeroSecreto}!🎉`);
+    alert(
+      `🎉You won!!! The secret number really is ${numeroSecreto}, you tryed ${tentativas}x!🎉`
+    );
   } else {
     if (numeroSecreto > chute) {
       alert(`O número secreto é maior que ${chute}!`);
     } else {
       alert(`O número secreto é menor que ${chute}!`);
     }
+    tentativas++;
   }
 }
